@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HiRes project">
+	<meta name="author" content="item084">
+	<title>HiRes data</title>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="jsGrid">Loading...</div>
+    </div>
+
+  <script>
+    let datasets = []
+    // Call REST API to get datasets
+    fetch('/api/v1/datasets/', { credentials: 'include' })
+      .then((response) => {
+        if (!response.ok) throw Error(response.statusText);
+        return response.json();
+      })
+      .then((data) => {
+        datasets = data.datasets;
+        console.log(datasets);
+        $("#jsGrid").jsGrid({
+            width: "100%",
+            height: "400px",
+     
+            inserting: true,
+            editing: true,
+            // sorting: true,
+            // paging: true,
+     
+            data: datasets,
+     
+            fields: [
+                { name: "id", type: "number", width: 20 },
+                { name: "name", type: "text", width: 50, validate: "required" },
+                { name: "path", type: "text", width: 150, validate: "required" },
+                { type: "control" }
+            ],
+
+            onItemInserted: function(args) {
+                // console.log(args.grid);
+                console.log(args.item);
+                fetch("/api/v1/datasets/new/", {
+                    credentials: 'include',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    method: 'post',
+                    body: JSON.stringify(args.item),
+                  }).then((response) => {
+                    if (!response.ok) throw Error(response.statusText);
+                    return response.json();
+                  }).then((feedback) => {
+                    console.log(feedback);
+                    $("#jsGrid").jsGrid("updateItem", args.item, { id: feedback.id, name: feedback.name, path: feedback.path }).done(function() {
+                        console.log("update completed");
+                    });
+                      // comments: prevState.comments.concat(feedback),
+                  }).catch((error) => console.log(error));
+            },
+
+            onItemDeleted: function(args) {
+                // console.log(args.grid);
+                console.log(args.item);
+                fetch(`/api/v1/datasets/delete/${args.item.id}/`, {
+                    credentials: 'include',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    method: 'delete',
+                    body: JSON.stringify(args.item),
+                  }).then((response) => {
+                    if (!response.ok) throw Error(response.statusText);
+                    return response.json();
+                  }).then((feedback) => {
+                    console.log(feedback);
+                      // comments: prevState.comments.concat(feedback),
+                  }).catch((error) => console.log(error));
+            }
+        });
+      })
+      .catch((error) => console.log(error));
+
+
+    </script>
+
+  </body>
+</html>

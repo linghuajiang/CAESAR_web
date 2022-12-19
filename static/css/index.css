@@ -1,0 +1,135 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.main {
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.panel {
+  align-items: center;
+  width: 100%;
+  margin-bottom: 50px;
+  min-width: 450px;
+  max-width: 450px;
+}
+
+.panel-body {
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 50px;
+  min-width: 450px;
+}
+
+hr {
+  width: 100%;
+}
+
+#nbframe{
+	-webkit-transition:800ms ease-in-out;
+	-moz-transition:800ms ease-in-out;
+	-o-transition:800ms ease-in-out;
+	-ms-transition:800ms ease-in-out;
+  transition:800ms ease-in-out;
+  width: 0;
+}
+
+.window {
+  margin-left: 20px;
+  width: 0;
+}
+
+body .toast {
+  display: flex;
+}
+
+.prog_line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+label {
+  color: black;
+  font-size: 14px;
+}
+
+a.navlink:link,
+a.navlink:visited {
+    color: grey; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a.navlink:active,
+a.navlink:hover {
+    color: black; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a.title:link,
+a.title:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a.title:hover,
+a.title:active {
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  color: firebrick;
+}
+
+a.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a.contact:link,
+a.contact:visited {
+  text-decoration: none;
+}
+
+a.contact:hover,
+a.contact:active {
+  text-decoration: none;
+}
+
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+a:active,
+a:hover {
+    text-decoration: none;
+}

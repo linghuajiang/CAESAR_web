@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HiRes project">
+    <meta name="author" content="item084">
+    <title>HiRes documentation</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="/static/css/doc.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://vis.nucleome.org/static/lib/nb-dispatch.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-white text-left">Dr. Liu&rsquo;s research lab aims to develop machine learning approaches for real-world bioinformatics and medical informatics problems. We believe that computational methods are essential in order to understand many of these molecular biology problems, including the dynamics of genome conformation and nuclear organization, gene regulation, cellular networks, and the genetic basis of human diseases.</p>
+
+          <p class="text-white text-left">Liu Lab currently has openings for graduate students and postdocs. Please reach out to Dr. Jie Liu via email if you are interested.</p>
+            </div>
+            <div class="col-sm-3 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="https://jieliu6.github.io" target="_blank" class="contact label" style="color: black;">Home</a>
+          <a href="https://jieliu6.github.io" target="_blank" class="icon-home contact" style="color:black; font-size:14pt"></a></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="mailto:drjieliu@umich.edu" target="_blank" class="contact label" style="color: black;">Email</a>
+          <a href="mailto:drjieliu@umich.edu" target="_blank" class="icon-envelope-alt contact" style="color: #b23121; font-size:14pt"></a></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="https://github.com/jieliu6" target="_blank" class="contact label" style="color: black;">GitHub</a>
+          <a href="https://github.com/jieliu6" target="_blank" class="icon-github contact" style="font-size:14pt"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#navbarHeader" class="navbar-brand d-flex align-items-center" data-toggle="collapse" data-target="#navbarHeader">
+            <strong>Liu&nbsp;Lab&nbsp;&#124;&nbsp;HiRes&nbsp;Project</strong>
+          </a>
+          <button class="btn btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Contact us</span>
+          </button>
+        </div>
+      </div>
+  </header>
+
+
+  <!-- main -->
+  <div class="main container d-flex flex-row justify-content-center">
+    <!-- panel -->
+    <div class="container barlist d-flex flex-column"> 
+      <div class="sticky-top card bar-list-body mt-5 text-left">
+        <h3>Project Name</h3>
+        <hr>
+        
+        <a href="#getting-started">
+          <h5>Getting Started</h5>
+        </a>
+
+        <a href="#user-guide">
+          <h5>1 User Guide</h5>
+        </a>
+        <a href="#view-context-maps">
+          <h6>1.1 View contact maps</h6>
+        </a>
+        <a href="#compute-attributions">
+          <h6>1.2 Compute & view attributions</h6>
+        </a>
+
+        <a href="#developer-guide">
+          <h5>2 Developer Guide</h5>
+        </a>
+        <a href="#project-layout">
+          <h6>2.1 Project layout</h6>
+        </a>
+        <a href="#setup">
+          <h6>2.2 Setup</h6>
+        </a>
+        <a href="#basic-operations">
+          <h6>2.3 Basic operations</h6>
+        </a>
+        <a href="#to-do-list">
+          <h6>2.4 To-do list</h6>
+        </a>
+      </div>
+    </div>
+    <!-- window -->
+    <div class="container content-list d-flex flex-column"> 
+      <div class="card content-list-body mt-5 text-left">
+        <h1>Documentation</h1>
+        <hr>
+        
+        <h3 id="getting-started">Getting Started</h3>
+        <p>The <a href="https://nucleome.dcmb.med.umich.edu/" target="_blank">&lt;project name&gt; website</a> provides a platform to view 
+          contact maps of tissues, perform attribution calculation and view the the visulization of the results. Chrome browser is recommended to
+          open the website.</p>
+        
+        <hr>
+        <h3 id="user-guide">1 User Guide</h3>
+        <h5 id="view-context-maps">1.1 View contact maps</h5>
+        <p>The website provides an interface to view predicted contact maps of 4tissues. One can choose a tissue from the drop-down list 
+          and click on the 'View contact map' button. The website will open the Nucleome Browser in the same page.
+        </p>
+        <p>
+          Currently, we support<br>
+          tissue1<br>
+          tissue2<br>
+          ...
+        </p>
+        <h5 id="compute-attributions">1.2 Compute attributions</h5>
+        <p>The website provides an interface to view the real-time attribution computation results. To view the a certain region, one needs to choose the
+          tissue, drag the area, paste the coordinations to the form and click on the 'Attribution' button. You will be prompted to choose to whether
+          open the result in the same page(tab) or a new page. <br>
+          ...
+        </p>
+  
+        <hr>
+        <h3 id="developer-guide">2 Developer Guide</h3>
+        <p>The server has two main jobs: </p>
+        <p>1. Host local data (.hic, .bigWig) and serve them to the <a href="https://vis.nucleome.org/", target="_blank">Nucleome Browser</a>. </p>
+        <p>2. Host a website that processes requests from users and present results. To do this, concurrency must be dealt with. </p>
+        <p>The project folder is currently named hirespy (a HiRes project web server written in python...)</p>
+        <h5 id="project-layout">2.1 Project layout</h5>
+        <p>Database, web server, attribution module, nucleome browser's data server program, data. </p>
+        <h6>Database</h6>
+        <p>Using (built-in) sqlite3 in python. The database is at 'var/hirespy.sqlite'. Initial schema and data are stored at 'sql/'. Currently contains
+          two tables 'requests' that stores user requests and 'datasets' that stores tissues info.
+        </p>
+        <p>Issues: Sqlite has a poor concurrency support. Sqlite is thread safe, but will raise 'timeout' exception when many threads writes to the same table.
+          This is currently avoided by using a global lock declared in 'hirespy/config.py' that protects db query. Consider switching to MySql in the future.
+        </p>
+        <h6>Web server</h6>
+        <p>Flask. It is a simple but highly flexible web server framework. It currently has following pages: the home page, the documentation page and a dataset
+           management page. It also serves an API used to manage user requests. The webpage is designed with 
+           <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> framework. The HTTP server / proxy server is NGINX.</p>
+        <p>HTML files are stored at 'hirespy/templates/'. 'index.html' is the home page. 'chart.html' is the online database management interface (to be finished).</p>
+        <p>Currently, there seems to be no need to switch to another framework. I haven't tried Django yet. The API design can be improved. 
+          How to fetch data from the iframe inside the webpage (that links to the nucleome browser) is a hard problem yet to be solved.</p>
+        <h6>Attributions module</h6>
+        <p>Using Fan's attribution model, currently at 'hirespy/attr/'</p>
+        <h6>Nucleserver</h6>
+        <p>See Nucleome Browser's <a href="https://github.com/nucleome/nucleserver" target="_blank">documentation</a>. The configuration files are in the form of xlsx. 
+          They are edited in python using openpyxl. 
+          The template is stored at 'hirespy/templates/config_.xlsx'. The generated files are store at '(root)/var/www/data/sheets/'.
+        </p>
+        <h6>Data</h6>
+        <p>The .hic and .bigWig files are at '(root)/var/www/data/'.</p>
+        <h6>Concurrency / Capacity</h6>
+        <p>The design of nucleserver provided by Nucleome Browser restricts that one instance of nucleserver must be running for one user at a different port. 
+          Currently, we use a queue with a certain capacity to accommodate the users. Each user is given an incrementing unique ID to identify their requests.
+          Once the id is given, the attribution computation will start and running in parallel with others. The results will be served to a certain port that is
+          ultimately used in the nucleome browser. The port number is determinded by id % capacity. Once the id exceeds the capacity, the port wraps around and 
+          the previous request is invalidated. If that specific port is still in use, the user will see 'server busy' message and will not get an id.
+          (We should think of a better and scalable design in the future. )
+        </p>
+
+        <h5 id="setup">2.2 Setup</h5>
+        <p>Dependencies are specified in 'hirespy/setup.py'. The best practice is to set up a python virtual environment. </p>
+        <p>Environment setup code snippet:</p>
+        <pre>
+          <code>
+            $ python3 -m venv env
+            $ source env/bin/activate
+            $ pip install -e .
+            $ export LC_ALL=en_US.UTF-8
+            $ pwd  # .../hirespy
+            $ bin/app restart  # RUN
+            $ bin/dev  # DEBUG
+          </code>
+        </pre>
+        <p>Proxy setup code snippet:</p>
+        <pre>
+          <code>
+            $ sudo vim /etc/nginx/default.d/proxy.conf
+            $ pkexec systemctl (restart|stop|start|status) nginx
+          </code>
+        </pre>
+        <p>Proxy configuration see 'hirespy/templates/proxy.config'.</p>
+        <h5 id="basic-operations">2.3 Basic operations</h5>
+        <p>Adding a tissue. Adding a module. ... (editing)</p>
+        <h5 id="to-do-list">2.4 To-do list</h5>
+        <p>- A command line management tool.</p>
+        <p> - ... (editing)</p>
+      </div>
+    </div>
+  </div>
+    
+  <hr />
+
+  <!-- copyright -->
+  <p class="mt-5 text-muted"><!--&copy;-->Acknowledgment : <a href="https://vis.nucleome.org/" target="_blank"
+     style="color: gray; text-decoration: none; border-bottom: solid 1px #e4e4e4;">Nucleome Browser</a></p>
+  <p class="mb-3 text-muted"><!--&copy;-->&copy; Liu Lab | University of Michigan | 2020</p>
+    
+  <!-- footer -->
+  <footer class="blog-footer">
+      <!--p>Template from <a class="navlink" href="https://getbootstrap.com/">Bootstrap</a> by <a class="navlink" href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p-->
+      <a class="navlink" href="#">Back to top</a>
+      </p>
+  </footer>
+      
+  </body>
+</html>

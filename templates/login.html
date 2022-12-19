@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HiRes project">
+    <meta name="author" content="item084">
+    <title>Liu Lab | CAESAR</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://vis.nucleome.org/static/lib/nb-dispatch.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #353535cc;">
+      <a class="navbar-brand font-weight-bold" href="">Liu&nbsp;Lab&nbsp;&#124;&nbsp;CAESAR</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#nav-caesar" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#nav-contact" href="#">Contact</a>
+          </li>
+          <!--li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li-->
+          <!--li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li-->
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/caesar/">Guest Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Login</a>
+          </li>
+        </ul>
+        <!--form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form-->
+    </nav>
+
+    <!-- Pop-up Modals -->
+    <!-- About -->
+    <div class="modal fade bd-example-modal-xl" id="nav-caesar">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">About CAESAR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left" style="margin-left: 20px; margin-right: 20px;">
+            <p>Leveraging currently available high-resolution chromatin organizational data
+              (Micro-C) on H1-ESC and HFF, CAESAR imputes high-resolution contact maps for
+              90 human tissues/cell-types from low-resolution Hi-C and epigenomic features.
+              CAESAR imputes all chromatin contacts with genomic distances less than 200 kb,
+              which cover most fine-scale structures (e.g., loops and stripes) discovered by Micro-C.
+              CAESAR web server allows users to explore these high-resolution chromatin
+              contact maps at 1 kb resolution.
+              For specific fine-scale chromatin structures (e.g., loops or stripes),
+              CAESAR uses integrated gradient to identify the responsible epigenomic features
+              during the imputation. In the web server, the user can choose arbitrary regions
+              for attribution calculation and the results will be visualized below the contact map.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade bd-example-modal-xl" id="nav-contact">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Contact Liu Lab</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left" style="margin-left: 20px; margin-right: 20px;">
+            <div class="container-fluid d-flex flex-row justify-content-center">
+              <div class="mr-5">
+                <p>For CAESAR model's technical details, please contact Fan Feng [fanfeng@umich.edu].
+                  For accessing the data and web server, please contact Yuan Yao [kelyao@umich.edu].
+                  We use GitHub Issues to track technical issues [https://github.com/item084/hirespy/issues].
+                  (Currently we use this link. In the final we need to switch to the repo for CAESAR model.)
+                </p>
+              </div>
+            <div class="w-100">
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="https://jieliu6.github.io" target="_blank" class="contact label" style="color: black;">Home</a>
+                <a href="https://jieliu6.github.io" target="_blank" class="icon-home contact" style="color:black; font-size:14pt"></a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="mailto:drjieliu@umich.edu" target="_blank" class="contact label" style="color: black;">Email</a>
+                <a href="mailto:drjieliu@umich.edu" target="_blank" class="icon-envelope-alt contact" style="color: #b23121; font-size:14pt"></a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="https://github.com/jieliu6" target="_blank" class="contact label" style="color: black;">GitHub</a>
+                <a href="https://github.com/jieliu6" target="_blank" class="icon-github contact" style="font-size:14pt"></a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="container-fluid d-flex flex-column justify-content-center text-white" style="background-color: #474747;">
+    <div class="mb-3" style="margin-top: 100px;">
+      <h1 class="h1 font-weight-normal" >
+        CAESAR Server
+      </h1>
+      <h3 class="h3 font-weight-light" >
+        <strong>C</strong>hromosomal&nbsp;structure&nbsp;<strong>A</strong>nd&nbsp;<strong>E</strong>pigenomic<strong>S</strong>&nbsp;<strong>A</strong>nalyze<strong>R</strong>
+      </h3>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" disabled>Sign up</button>
+      <button type="button" class="btn btn-primary" disabled>Login</button>
+      <a href="/caesar/"><button type="button" class="btn btn-primary" id="guest_btn">Guest Login</button></a>
+    </div>
+    <div class="mb-5 mt-1">
+      <h1 class="font-weight-light" style="font-size: small;">
+        *Guest Login is available now.
+      </h1>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #FFCB05;">
+    <div class="container-fluid w-75" style="background-color:#00274C;">
+      <div class="container-fluid d-flex flex-row justify-content-around text-white w-75" style="background-color:#00274C;">
+        <div class="mt-3 mb-2">
+          <h1 class="h2 font-weight-light" id = "guest_cnt">-</h1>
+          <h1 class="font-weight-light" style="font-size: medium;">Guests</h1>
+        </div>
+        <div class="mt-3 mb-2">
+          <h1 class="h2 font-weight-light" id = "view_cnt">-</h1>
+          <h1 class="font-weight-light" style="font-size: medium;">View Requests</h1>
+        </div>
+        <div class="mt-3 mb-2">
+          <h1 class="h2 font-weight-light" id = "attr_cnt" >-</h1>
+          <h1 class="font-weight-light" style="font-size: medium;">Attribution</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function get_stats() {
+      let res = await fetch(`/api/v1/stats/`, {
+          credentials: 'include',
+          method: 'get',
+        }).then((response) => {
+          if (!response.ok) throw Error(response.statusText);
+            return response.json();
+        }).then((feedback) => {
+          $('#guest_cnt').text(feedback['guest']);
+          $('#view_cnt').text(feedback['view']);
+          $('#attr_cnt').text(feedback['attr']);
+        }).catch(
+          (error) => {
+            console.log(error)
+          }
+        );
+    }
+    get_stats(); 
+</script>
+
+  <!-- main -->
+  <div class="main container-fluid d-flex flex-row justify-content-center">
+    <!-- panel -->
+    <div class="card panel-body mt-5 d-flex flex-column justify-content-center text-center w-75">
+      <!-- title -->  
+      <div>
+        <h1 class="h3 font-weight-normal">Latest News</h1>
+      </div>
+          
+      <hr />
+
+      <!-- News 2 -->
+      <div class="card text-left w-100 mb-3">
+        <div class="card-body">
+          <h5 class="card-title mb-2">Connecting high-resolution 3D chromatin organization with epigenomics</h5>
+          <span style="color: gray; font-size: 14px; margin-top: 4px; width: fit-content">
+            <span class="icon-calendar"></span>&nbsp;&nbsp;January 1st 2021
+          </span>
+          <hr \>
+          <p class="card-text">
+            Our preprint is now available on biorxiv.
+            <a href="https://www.biorxiv.org/content/10.1101/2020.10.13.338004v1" class="stretched-link" target="_blank" style="color: #00000000;">link</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- News 1 -->
+      <div class="card text-left w-100 mb-3">
+        <div class="card-body">
+          <h5 class="card-title mb-2">Download biosample data (chr17, 200 bp resolution)</h5>
+          <span style="color: gray; font-size: 14px; margin-top: 4px; width: fit-content">
+            <span class="icon-calendar"></span>&nbsp;&nbsp;September 1st 2020
+          </span>
+          <hr \>
+          <p class="card-text">
+            We imputed biosamples including tissues, cell lines, primary cells and in vitro differentiated cells.
+          <a href="/post/download-tissues-200" class="stretched-link" target="_blank" style="color: #00000000;">link</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- News 1 -->
+      <div class="card text-left w-100">
+        <div class="card-body">
+          <h5 class="card-title mb-2">Download biosample data (whole genome, 1 Kb resolution)</h5>
+          <span style="color: gray; font-size: 14px; margin-top: 4px; width: fit-content">
+            <span class="icon-calendar"></span>&nbsp;&nbsp;September 1st 2020
+          </span>
+          <hr \>
+          <p class="card-text">
+            We imputed biosamples including tissues, cell lines, primary cells and in vitro differentiated cells.
+          <a href="/post/download-tissues" class="stretched-link" target="_blank" style="color: #00000000;">link</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+  <hr />
+
+  <!-- copyright -->
+  <p class="mt-5 text-muted">Acknowledgment : <a href="https://vis.nucleome.org/" target="_blank"
+     style="color: gray; text-decoration: none; border-bottom: solid 1px #e4e4e4;">Nucleome Browser</a>
+  </p>
+  <p class="mb-3 text-muted">
+    &copy; Liu Lab &#124; University of Michigan &#124; 2020
+  </p>
+    
+  <!-- tutorial -->
+  <!--div class="jumbotron">
+      <h1 class="display-4">Tutorial</h1>
+      <p class="lead">Step 1</p>
+      <hr class="my-4">
+      <p>write something</p>
+      <a class="btn btn-primary btn-lg" target="_blank" href="/static/tutorial/tutorial.pdf" role="button">tutorial.pdf</a>
+  </div-->
+
+  <!-- footer -->
+  <footer class="blog-footer">
+    <a class="navlink" href="#">Back to top</a>
+  </footer>
+      
+  </body>
+</html>

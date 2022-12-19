@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HiRes project">
+  <meta name="author" content="item084">
+  <title>CAESAR</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="/static/css/index.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://vis.nucleome.org/static/lib/nb-dispatch.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-white text-left">Dr. Liu&rsquo;s research lab aims to develop machine learning approaches for real-world bioinformatics and medical informatics problems. We believe that computational methods are essential in order to understand many of these molecular biology problems, including the dynamics of genome conformation and nuclear organization, gene regulation, cellular networks, and the genetic basis of human diseases.</p>
+
+          <p class="text-white text-left">Liu Lab currently has openings for graduate students and postdocs. Please reach out to Dr. Jie Liu via email if you are interested.</p>
+            </div>
+            <div class="col-sm-3 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="https://jieliu6.github.io" target="_blank" class="contact label" style="color: black;">Home</a>
+          <a href="https://jieliu6.github.io" target="_blank" class="icon-home contact" style="color:black; font-size:14pt"></a></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="mailto:drjieliu@umich.edu" target="_blank" class="contact label" style="color: black;">Email</a>
+          <a href="mailto:drjieliu@umich.edu" target="_blank" class="icon-envelope-alt contact" style="color: #b23121; font-size:14pt"></a></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="https://github.com/jieliu6" target="_blank" class="contact label" style="color: black;">GitHub</a>
+          <a href="https://github.com/jieliu6" target="_blank" class="icon-github contact" style="font-size:14pt"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#navbarHeader" class="navbar-brand d-flex align-items-center" data-toggle="collapse" data-target="#navbarHeader">
+            <strong>Liu&nbsp;Lab&nbsp;&#124;&nbsp;CAESAR&nbsp;( <u>C</u>hromosomal&nbsp;structure&nbsp;<u>A</u>nd&nbsp;<u>E</u>pigenomic<u>S</u>&nbsp;<u>A</u>nalyze<u>R</u> )</strong>
+          </a>
+          <button class="btn btn-outline-light" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Contact us</span>
+          </button>
+        </div>
+      </div>
+  </header>
+
+  <!-- main -->
+  <div class="main container-fluid d-flex flex-row justify-content-center">
+    <!-- panel -->
+    <div class="container panel d-flex flex-column"> 
+      <div class="card panel-body mt-5 text-left">
+        <!-- title -->  
+        <div class="d-flex flex-column justify-content-center text-center">
+          <div>
+          <h1 class="h3 font-weight-normal" >
+            CAESAR
+          </h1>
+          </div>
+          <!-- learn more -->
+          <div class="d-flex flex-row justify-content-center">
+            <a href="#" data-toggle="modal" data-target="#projectDetails" class="project title"
+              style="color: gray; font-size: 14px; margin-top: 4px; border-bottom: solid 1px #e4e4e4; width: fit-content">
+              Description | Data Download | Visit Stat | Cite | Help
+            </a>
+
+          </div>
+          <!-- Vertically centered modal -->
+          <div class="modal fade bd-example-modal-xl" id="projectDetails" data-keyboard="false" tabindex="-1" >
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">CAESAR</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-left" style="margin-left: 20px; margin-right: 20px;">
+                  <p>Whereas 3D chromatin organization at the large scale of topologically associating domains and compartments has been well characterized, our understanding of fine-scale 3D chromatin organization at the nucleosome resolution remains limited. The recent Micro-C technology allows us to profile high-resolution chromatin organization in a high-throughput fashion, but it is only available on a few cell lines so far. With the increasing evidence that epigenomic state is highly relevant to fine-scale chromatin organization, we propose CAESAR, a deep learning model to predict nucleosome level chromatin contact maps from previously profiled epigenomic data such as chromatin accessibility and histone modifications. The model accurately predicts fine-scale structures which Hi-C sequencing fails to detect, including short-range chromatin loops and stripes. Our model produces high-resolution chromatin contact maps for 36 human tissues and cell lines, and the imputed chromatin contacts are highly enriched for previously known eQTLs. With nine different hematopoietic cancer cell lines, the imputed enhancer-promoter interactions from our model can be mostly validated with CRISPRi functional profiling in the 3-megabase MYC region. The model is also coupled with an attribution method which identifies the epigenomic features explanatory to these fine-scale chromatin structures. The explanatory features help to further sub-type fine-scale chromatin structures and elucidate the interplay between histone modifications and nucleosome level chromatin organization. The imputed high-resolution contact maps for the 36 human tissues and cell lines are shared on a web server, which allows users to easily navigate these fine-scale chromatin structures and the corresponding explanatory epigenomic features. <a href="#">link</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- steps -->
+        <form action="/" method="post" enctype="multipart/form-data">
+          <!-- option -->
+          <label class="text-left" for="type" data-toggle="tooltip" data-placement="left" title="Visualize in Nucleome Browser">
+            <strong>Step 1:</strong> Select a tissue or cell line to visualize:
+            <a data-toggle="modal" data-target="#step1help" href=""
+              style="font-size: 14px; border-bottom: solid 1px #e4e4e4;">help</a>
+          </label>
+          <select class="form-control mb-3" name="type" id="type" required autofocus>
+          <option value="default"></option>
+          {% for dataset in datasets %}
+          <option value="{{ dataset.name }}">{{ dataset.name }}</option>
+          {% endfor %}
+          </select>
+          <button class="btn btn-outline-primary btn-block mb-3" id="view_btn" type="button" disabled>
+            View contact map
+          </button>
+          <!-- input -->
+          <label class="text-left" for="submit" data-toggle="tooltip" data-placement="left" title="e.g. chr7:100431453-100449162,chr7:100482501-100490325">
+          <strong >Step 2:</strong> Select a region of interest on the contact map:
+          <a data-toggle="modal" data-target="#step2help" href=""
+            style="font-size: 14px; border-bottom: solid 1px #e4e4e4;">help</a>
+          </label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Region</span>
+            </div>
+            <!-- input not required autofocus -->
+            <input type="text" name="region" id="region" class="form-control" autocomplete="off" placeholder="" required >
+          </div>
+          <!-- button onclick="submit_query()"-->
+          <button class="btn btn-outline-primary btn-block" id="submit_btn" type="button" disabled>Compute attribution</button>
+        </form>
+    
+        <hr />
+
+        <!-- progress bar -->
+        <label for="prog_out" class="text-left w-100">Progress:</label>
+        <div id="prog_out" class="progress mb-3 w-100">
+          <div id="prog_in" class="progress-bar bg-success" role="progressbar" style="width: 0%;">0%</div>
+        </div>
+        <div class="prog_line"></div>
+        <button href="#" 
+          target="_blank" class="btn btn-outline-primary btn-block" id="go_btn" disabled>View attribution results</button>
+        <div id="go_url" style="display: none;">#</div>
+        <!-- result area -->
+        <div class="form-group text-left w-100" style="margin-top: 4pt;">
+          <label for="resultArea" >Details:</label>
+          <textarea class="form-control z-depth-1" id="resultArea" rows="3" placeholder="Details will be shown here..."></textarea>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border text-success" role="status" id="spinner" style="visibility: hidden">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <!-- div class="container p-3 mb-3 border text-left">
+          Link:
+        </div -->
+
+        <hr />
+        <div class="w-100 d-flex flex-row mb-2 align-items-start">
+          <div class="w-100 d-flex flex-column align-items-start">
+            <label class="text-left" data-toggle="tooltip" data-placement="left" title="step3">
+              <strong >Step 3:</strong> Compare with global structures:
+              <a data-toggle="modal" data-target="#step3help" href=""
+              style="font-size: 14px; border-bottom: solid 1px #e4e4e4;">help</a>
+            </label>
+            <div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">loops</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">stripes</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button href="#" 
+          target="_blank" class="btn btn-outline-primary btn-block" id="subt_btn" disabled>Button</button>
+        <div id="inter_url" style="display: none;">#</div>
+
+
+      </div>
+    
+      <!-- toast -->
+      <div class="toast text-left" data-autohide="false">
+        <div class="toast-header mr-auto text-primary">
+          Tip:
+        </div>
+        <div class="toast-body">
+          Please wait for the process bar to complete.<br>
+            Avoid frequent resubmissions.
+        </div>
+      </div>
+    </div>
+    <!-- window -->
+    <div class="window border-0 border-dark embed-responsive" id="nbframe">
+      <iframe name="nbrowser" id="nbrowser" class="embed-responsive-item" allowfullscreen></iframe>
+    </div>
+  </div>
+    
+  <hr />
+
+  <!-- copyright -->
+  <p class="mt-5 text-muted"><!--&copy;-->Acknowledgment : <a href="https://vis.nucleome.org/" target="_blank"
+     style="color: gray; text-decoration: none; border-bottom: solid 1px #e4e4e4;">Nucleome Browser</a></p>
+  <p class="mb-3 text-muted"><!--&copy;-->&copy; Liu Lab | University of Michigan | 2020</p>
+    
+  <!-- tutorial -->
+  <!--div class="jumbotron">
+      <h1 class="display-4">Tutorial</h1>
+      <p class="lead">Step 1</p>
+      <hr class="my-4">
+      <p>write something</p>
+      <a class="btn btn-primary btn-lg" target="_blank" href="/static/tutorial/tutorial.pdf" role="button">tutorial.pdf</a>
+  </div-->
+
+  <!-- footer -->
+  <footer class="blog-footer">
+      <!--p>Template from <a class="navlink" href="https://getbootstrap.com/">Bootstrap</a> by <a class="navlink" href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p-->
+      <a class="navlink" href="#">Back to top</a>
+      </p>
+  </footer>
+
+  <!-- Modals -->
+    <div class="modal fade bd-example-modal-xl" id="step1help" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Step 1: </h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+      <!-- Slide -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+          <img src="/static/images/tutorial1.gif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="color: black; background-color: #ffffffdd;">
+            <h5>Step 1.A</h5>
+            <p>Select a tissue and click on the button to see its visualization in Nucleome Browser.</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+          <img src="/static/images/tutorial2.gif" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="color: black; background-color: #ffffffdd;">
+            <h5>Step 1.B</h5>
+            <p>Drag a region in Nucleom Browser and you can see its coordination in the top-left box.</p>
+          </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+      </div -->
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="modal fade bd-example-modal-xl" id="step2help" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Step 2: </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Slide -->
+        <div id="carouselExampleCaptions1" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions1" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions1" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions1" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/static/images/tutorial3.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color: black; background-color: #ffffffdd;">
+            <h5>Step 2.A</h5>
+            <p>Paste the region you copied from Nucleome Browser that you want to apply attribution calculation. Wait for the calculation to complete.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/images/tutorial4.gif" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color: black; background-color: #ffffffdd;">
+            <h5>Step 2.B</h5>
+            <p>When it finishes, click on the button to see the results as tracks.</p>
+            </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions1" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions1" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
+        </div>
+      <!-- div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div -->
+      </div>
+      </div>
+    </div>
+    </div>
+
+  <!-- Frame expand -->
+
+
+  <!-- Go modal -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="go_mdl">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Finished.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Attribution computation finished.</p>
+          <p>Show the result now?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="go_mdl_btn_1" data-dismiss="modal">In this tab</button>
+          <button type="button" class="btn btn-primary" id="go_mdl_btn_2" data-dismiss="modal">In a new tab</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    /* Select contact map according to options */
+    function select_url() {
+      let opt = document.getElementById('type').value;
+      if (opt!=null) {
+        let optIndex = document.getElementById('type').selectedIndex-1;
+        console.log(`https://vis.nucleome.org/v1/main.html?config=https://nucleome.dcmb.med.umich.edu/config/port${2900+optIndex}.json`);
+        return `https://vis.nucleome.org/v1/main.html?config=https://nucleome.dcmb.med.umich.edu/config/port${2900+optIndex}.json`
+        
+      }
+      return "https://vis.nucleome.org/";
+    }
+
+    function view_frame() {
+      let nbframe = document.getElementById("nbframe");
+      let tissueurl = select_url();
+      /*console.log(tissueurl);*/
+      if (nbframe.style.width==="100%") {
+        window.open(tissueurl, "nbrowser");
+        document.getElementById("region").placeholder = "copy the region and paste here";
+      } else {
+        document.getElementById("nbframe").style.width="100%";
+        setTimeout(() => {
+          window.open(tissueurl, "nbrowser");
+          document.getElementById("region").placeholder = "copy the region and paste here";
+        }, 600);
+      }
+    }
+
+    function go_frame() {
+      let nbframe = document.getElementById("nbframe");
+      let gourl = document.getElementById("go_url").innerText;
+      console.log(gourl)
+      if (nbframe.style.width==="100%") {
+        window.open(gourl, "nbrowser");
+        setTimeout(() => {
+        //  console.log("nav and highlight")
+        //  window.nav();
+          window.high();
+        }, 4000);
+      } else {
+        document.getElementById("nbframe").style.width="100%";
+        setTimeout(() => {
+          window.open(gourl, "nbrowser")
+        }, 600);
+        setTimeout(() => {
+        //  console.log("nav and highlight")
+        //  window.nav();
+          window.high();
+        }, 5000);
+      }
+    }
+
+    function subt_frame() {
+      let nbframe = document.getElementById("nbframe");
+      let subturl = document.getElementById("inter_url").innerText;
+      //subturl = 'https://nucleome.dcmb.med.umich.edu/interactive';
+      console.log(subturl)
+      if (nbframe.style.width==="100%") {
+        document.getElementById("nbrowser").src = subturl;
+        //$("#nbrowser").remove();
+        $("#nbrowser").remove();
+        var i = `<iframe name="nbrowser" id="nbrowser" class="embed-responsive-item" src="${subturl}" allowfullscreen></iframe>`;
+        $("#nbframe").append(i);
+        //window.open(subturl, "nbrowser");
+        console.log(subturl)
+      } else {
+        document.getElementById("nbrowser").style.width="100%";
+        setTimeout(() => {
+          window.open(subturl, "nbrowser")
+        }, 600);
+      }
+    }
+
+    function go_blank() {
+      let gourl = document.getElementById("go_url").innerText;
+      window.open(gourl, "_blank");
+    }
+
+    document.getElementById("view_btn").onclick=view_frame;
+    document.getElementById("go_btn").onclick=go_frame;
+    document.getElementById("go_mdl_btn_1").onclick=go_frame;
+    document.getElementById("go_mdl_btn_2").onclick=go_blank;
+    document.getElementById("subt_btn").onclick=subt_frame;
+  </script>
+
+  <!-- Select option -->
+  <script>
+    function change_view() {
+      let opt = document.getElementById('type').value;
+      if (opt === "default") {
+        console.log(opt);
+        $("#submit_btn").prop('disabled', true);
+        $("#view_btn").prop('disabled', true);
+        $("#view_btn").target = "_self";
+      } else {
+        //$("#view_btn").classList.remove("disabled");
+        //$("#submit_btn").classList.remove("disabled");
+        $("#submit_btn").prop('disabled', false);
+        $("#view_btn").prop('disabled', false);
+        $("#subt_btn").prop('disabled', false);
+        $("#view_btn").target = "_blank"
+        }
+    }
+    document.getElementById("type").onchange=change_view;
+  </script>
+
+
+  <!-- Attribution and Progress -->
+  <script>
+    function listen_progress(id, port){
+    // event.preventDefault();
+      let source = new EventSource(`/progress/${id}`);
+      source.onmessage = function (event) {
+        let json = JSON.parse(event.data);
+        $("#go_btn").prop('disabled', true);
+        $("#submit_btn").prop('disabled', true);
+        $("#spinner").css('visibility', 'visible');
+        $("#prog_in").css('width', json.prog + '%');
+        $("#prog_in").text(json.prog + '%');
+        $("#resultArea").text("");
+        $("#resultArea").prop('placeholder', json.msg);
+        if (json.prog == 100) {
+          $("#spinner").css('visibility', 'hidden');
+          $("#resultArea").text(json.result);
+          $("#submit_btn").prop('disabled', false);
+          $("#go_url").text(`https://vis.nucleome.org/v1/main.html?config=https://nucleome.dcmb.med.umich.edu/config/port${port}.json`);
+          $("#inter_url").text(`https://vis.nucleome.org/v1/main.html?config=https://nucleome.dcmb.med.umich.edu/config/port${port}i.json`);
+          $("#go_btn").prop('disabled', false);
+          $("#view_btn").prop('disabled', false);
+          $('#go_mdl').modal('show')
+          source.close()
+        }
+        if (json.prog == 99) {
+          $("#spinner").css('visibility', 'hidden');
+          $("#resultArea").text(json.msg);
+          $("#submit_btn").prop('class', 'btn btn-outline-primary btn-block')
+          $("#submit_btn").prop('disabled', false);
+          $("#go_btn").prop('disabled', false);
+          $("#view_btn").prop('disabled', false);
+          source.close()
+        }
+      }
+    }
+    
+    async function post_get_id() {
+      last_nav = temp_nav;
+      last_brush = temp_brush;
+      let type = document.getElementById('type').value;
+      let region = document.getElementById('region').value;
+      if (region == "") {
+        alert("A region must be selected, copied and pasted.");
+        return;
+      }
+      $("#submit_btn").prop('disabled', true);
+      $("#view_btn").prop('disabled', true);
+      $("#go_btn").prop('disabled', true);
+
+      if (last_nav == null) {
+        last_nav = temp_nav;
+      }
+      console.log(last_nav)
+
+      let msg = {
+        "type": type,
+        "region": region,
+        "bg": last_nav,
+      };
+      console.log(msg)
+      let res = await fetch(`/api/v1/attribution/`, {
+          credentials: 'include',
+          headers: {
+                      'Content-Type': 'application/json',
+          },
+          method: 'post',
+          body: JSON.stringify(msg),
+        }).then((response) => {
+          if (!response.ok) throw Error(response.statusText);
+            return response.json();
+        }).then((feedback) => {
+          console.log(feedback)
+          if (feedback['port'] === '0') {
+            $("#resultArea").text('Sorry, our server is busy.\nPlease try again later.');
+          }
+          return feedback
+        }).catch(
+          (error) => {
+            $("#resultArea").text('Sorry, our server is busy.\nPlease try again later.');
+            console.log(error)
+          }
+        );
+      if (res['port'] != '0') {
+        listen_progress(res["userid"], res["port"]);
+      }
+    }
+    document.getElementById("submit_btn").onclick=post_get_id;
+  </script>
+
+
+  <!-- slide stop -->
+  <script>
+    $('.carousel').carousel({
+      interval: false
+    })
+  </script>
+
+  <!-- tooltip init-->
+  <script>
+    $(function () { $('[data-toggle="tooltip"]').tooltip() } )
+  </script>
+      
+  <!-- toast init -->
+  <script>
+    $(document).ready(function(){
+    $('.toast').toast('show');
+    });
+  </script>
+    
+  <div id="connection" style="display: none;"></div>
+  <!-- Bridge -->
+  <script>
+    var temp_brush = null; // chr1:56732888-57068989
+    var temp_nav = {"chr":"chr1", "start":56732888, "end":57068989};
+    var last_brush = null;
+    var last_nav = null;
+    (function() {
+      let chan = nb.dispatch("update","brush")
+      chan.connect(function(d){
+        document.getElementById("connection").innerHTML = d.connection
+      })
+      // document.getElementById("btn").onclick = function(e){
+      //   chan.call("update",this,[{chr:"chr2",start:10000,end:50000}])                    
+      // }                        
+      //chan.on("update",function(d){
+      //  document.getElementById("message").innerHTML = JSON.stringify(d)
+      //})
+      chan.on("brush",function(d){
+        let temp1 = d[0]["chr"] + ":" + d[0]["start"] + "-" + d[0]["end"];
+        let temp2 = d[1]["chr"] + ":" + d[1]["start"] + "-" + d[1]["end"];
+        document.getElementById("region").value = temp1 + "," + temp2;
+        temp_brush = d;
+      })
+      chan.on("update",function(d){
+        temp_nav = d[0];
+      })
+      window.nav = function(){
+        if (last_nav == null) {
+          return;
+        }
+        console.log(last_nav);
+        //chan.call("update",this,[{chr:'chr1',start:1,end:2}])
+        //chan.call("update",this,[last_nav])
+        chan.call("update",this,[{chr:last_nav.chr,start:last_nav.start,end:last_nav.end}])
+      }
+      window.high = function() {
+        if (last_brush == null) {
+          return;
+        }
+        console.log(last_brush);
+        chan.call("brush",this,[{
+          chr:last_brush[0].chr,start:last_brush[0].start,end:last_brush[0].end,color:"grey"
+        },{
+          chr:last_brush[1].chr,start:last_brush[1].start,end:last_brush[1].end,color:"grey"
+        }])
+      }
+    })()
+
+  </script>
+      
+  </body>
+</html>

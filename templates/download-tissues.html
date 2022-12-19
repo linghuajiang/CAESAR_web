@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="HiRes project">
+    <meta name="author" content="item084">
+    <title>Liu Lab | Download </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="/static/css/index.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://vis.nucleome.org/static/lib/nb-dispatch.min.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #353535cc;">
+      <a class="navbar-brand font-weight-bold" href="">Liu&nbsp;Lab&nbsp;&#124;&nbsp;CAESAR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#nav-caesar" href="#">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#nav-contact" href="#">Contact <span class="sr-only">(current)</span></a>
+          </li>
+          <!--li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li-->
+          <!--li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li-->
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/caesar/">Guest Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Login</a>
+          </li>
+        </ul>
+        <!--form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form-->
+      </div>
+    </nav>
+    <div class="modal fade bd-example-modal-xl" id="nav-contact" data-keyboard="false" tabindex="-1" >
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Liu Lab</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left" style="margin-left: 20px; margin-right: 20px;">
+            <div class="container-fluid d-flex flex-row justify-content-center">
+              <div class="mr-3">
+                <p>For CAESAR model's technical details, please contact Fan Feng (fanfeng@umich.edu). For accessing the data and web server, please contact Yuan Yao (kelyao@umich.edu).
+                  We use GitHub Issues to track technical issues (https://github.com/item084/hirespy/issues).
+                  % (Currently we use this link. In the final we need to switch to the repo for CAESAR model.)</p>
+              </div>
+            <div class="w-100">
+              <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="https://jieliu6.github.io" target="_blank" class="contact label" style="color: black;">Home</a>
+                <a href="https://jieliu6.github.io" target="_blank" class="icon-home contact" style="color:black; font-size:14pt"></a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="mailto:drjieliu@umich.edu" target="_blank" class="contact label" style="color: black;">Email</a>
+                <a href="mailto:drjieliu@umich.edu" target="_blank" class="icon-envelope-alt contact" style="color: #b23121; font-size:14pt"></a></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="https://github.com/jieliu6" target="_blank" class="contact label" style="color: black;">GitHub</a>
+                <a href="https://github.com/jieliu6" target="_blank" class="icon-github contact" style="font-size:14pt"></a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade bd-example-modal-xl" id="nav-caesar" data-keyboard="false" tabindex="-1" >
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">CAESAR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-left" style="margin-left: 20px; margin-right: 20px;">
+            <p>Leveraging currently available high-resolution chromatin organizational data (Micro-C) on H1-ESC and HFF, CAESAR imputes high-resolution contact maps for 90 human tissues/cell types from low-resolution Hi-C and epigenomic features. CAESAR imputes all chromatin contacts with genomic distances less than 200 kb, which cover most fine-scale structures (e.g., loops and stripes) discovered by Micro-C.
+              CAESAR web server allows users to explore these high-resolution chromatin contact maps at 1 kb resolution.
+              For specific fine-scale chromatin structures (e.g., loops or stripes), CAESAR uses integrated gradient to identify the responsible epigenomic features during the imputation. In the web server, the user can choose arbitrary regions for attribution calculation and the results will be visualized below the contact map.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid d-flex flex-column justify-content-center text-white" style="background-color: #474747;">
+    <div class="mb-3" style="margin-top: 100px;">
+      <h1 class="h1 font-weight-normal" >
+        CAESAR Server
+      </h1>
+      <h3 class="h3 font-weight-light" >
+        <strong>C</strong>hromosomal&nbsp;structure&nbsp;<strong>A</strong>nd&nbsp;<strong>E</strong>pigenomic<strong>S</strong>&nbsp;<strong>A</strong>nalyze<strong>R</strong>
+      </h3>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" disabled>Sign up</button>
+      <button type="button" class="btn btn-primary" disabled>Login</button>
+      <a href="/caesar/"><button type="button" class="btn btn-primary" id="guest_btn">Guest Login</button></a>
+    </div>
+    <div class="mb-5 mt-1">
+      <h1 class="font-weight-light" style="font-size: small;">
+        *Guest Login is available now.
+      </h1>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #FFCB05;">
+    <div class="container-fluid w-75" style="background-color:#00274C;">
+    <div class="container-fluid d-flex flex-row justify-content-around text-white w-75" style="background-color:#00274C;">
+    <div class="mt-3 mb-2">
+      <h1 class="h2 font-weight-light" id = "guest_cnt" >
+        -
+      </h1>
+      <h1 class="font-weight-light" style="font-size: medium;">
+        Guests
+      </h1>
+    </div>
+    <div class="mt-3 mb-2">
+      <h1 class="h2 font-weight-light" id = "view_cnt" >
+        -
+      </h1>
+      <h1 class="font-weight-light" style="font-size: medium;">
+        View Requests
+      </h1>
+    </div>
+    <div class="mt-3 mb-2">
+      <h1 class="h2 font-weight-light" id = "attr_cnt" >
+        -
+      </h1>
+      <h1 class="font-weight-light" style="font-size: medium;">
+        Attribution
+      </h1>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    async function get_stats() {
+      let res = await fetch(`/api/v1/stats/`, {
+          credentials: 'include',
+          method: 'get',
+        }).then((response) => {
+          if (!response.ok) throw Error(response.statusText);
+            return response.json();
+        }).then((feedback) => {
+          $('#guest_cnt').text(feedback['guest']);
+          $('#view_cnt').text(feedback['view']);
+          $('#attr_cnt').text(feedback['attr']);
+        }).catch(
+          (error) => {
+            console.log(error)
+          }
+        );
+    }
+    get_stats(); 
+
+</script>
+
+  <!-- main -->
+  <div class="main container-fluid d-flex flex-row justify-content-center">
+    <!-- panel -->
+    <div class="container panel d-flex flex-column" style="max-width: 75%;"> 
+      <div class="card panel-body mt-5 text-left w-100">
+        <!-- title -->  
+        <div class="w-100 d-flex flex-column justify-content-center text-center">
+          <div>
+          <h1 class="h2 font-weight-normal mb-4" >
+            Download Biosample data (whole genome, 1 Kb resolution)
+          </h1>
+          <hr />
+          </div>
+
+          <!-- Galaxy download -->
+          <div>
+            <h1 class="h4 font-weight-normal">The data can also be downloaded from 
+              <a href="https://usegalaxy.org/u/linghua.j/h/caesar-contact-maps" target="_blank"
+              style="color: gray; text-decoration: none; border-bottom: solid 1px #e4e4e4;">Galaxy</a>
+            </h1>
+            <hr />
+          </div>
+              
+
+          <!-- learn more -->
+          <div class="d-flex flex-column justify-content-center">
+            <div class="row-4 mb-4">
+              <div class="list-group list-group-horizontal" style="font-size: larger;" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-tissue-list" data-toggle="list" href="#list-tissue" role="tab">tissue</a>
+                <a class="list-group-item list-group-item-action" id="list-cell-line-list" data-toggle="list" href="#list-cell-line" role="tab">cell line</a>
+                <a class="list-group-item list-group-item-action" id="list-primary-cell-list" data-toggle="list" href="#list-primary-cell" role="tab">primary cell</a>
+                <a class="list-group-item list-group-item-action" id="list-in-vitro-list" data-toggle="list" href="#list-in-vitro" role="tab" >in vitro differentiated cells</a>
+              </div>
+            </div>
+            <div >
+              <div class="w-100 tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-tissue" role="tabpanel">
+                  <table class="table table-sm table-bordered"><thead><tr><th scope="col">Tissue</th><th scope="col">Donor</th><th scope="col">Download</th></tr></thead><tbody><tr ><th scope="row" style="width:40%;" rowspan="1">adrenal gland</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/adrenal_gland_200_1k.hic/">download</a></td></tr><!-- tr ><th scope="row" style="width:40%;" rowspan="2">ascending aorta</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/ascending_aorta_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/ascending_aorta_f53_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="2">body of pancreas</th><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/body_of_pancreas_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/body_of_pancreas_m54_200_1k.hic/">download</a></td></tr --><tr ><th scope="row" style="width:40%;" rowspan="2">breast epithelium</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/breast_epithelium_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/breast_epithelium_f53_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="2">esophagus muscularis mucosa</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/esophagus_muscularis_mucosa_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/esophagus_muscularis_mucosa_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="3">esophagus squamous epithelium</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/esophagus_squamous_epithelium_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/esophagus_squamous_epithelium_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/esophagus_squamous_epithelium_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="4">gastrocnemius medialis</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/gastrocnemius_medialis_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/gastrocnemius_medialis_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/gastrocnemius_medialis_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/gastrocnemius_medialis_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">gastroesophageal sphincter</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/gastroesophageal_sphincter_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="2">heart left ventricle</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/heart_left_ventricle_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/heart_left_ventricle_f53_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">lung</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/lung_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">ovary</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/ovary_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">pancreas</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/pancreas_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="4">peyer's patch</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/peyer_s_patch_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/peyer_s_patch_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/peyer_s_patch_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/peyer_s_patch_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">prostate gland</th><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/prostate_gland_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="2">right atrium auricular region</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/right_atrium_auricular_region_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/right_atrium_auricular_region_f53_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="2">sigmoid colon</th><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/sigmoid_colon_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/sigmoid_colon_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="3">spleen</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/spleen_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/spleen_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/spleen_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="3">stomach</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/stomach_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/stomach_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/stomach_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">suprapubic skin</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/suprapubic_skin_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">testis</th><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/testis_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">thoracic aorta</th><td style="width:30%;">mixed</td><td style="width:30%;"><a href="/download/thoracic_aorta_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="3">thyroid gland</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/thyroid_gland_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/thyroid_gland_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/thyroid_gland_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">tibial artery</th><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/tibial_artery_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="4">tibial nerve</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/tibial_nerve_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/tibial_nerve_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/tibial_nerve_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/tibial_nerve_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="3">transverse colon</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/transverse_colon_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/transverse_colon_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/transverse_colon_m37_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="4">upper lobe of left lung</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/upper_lobe_of_left_lung_f51_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/upper_lobe_of_left_lung_f53_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1JKYN (male, 37yrs)</td><td style="width:30%;"><a href="/download/upper_lobe_of_left_lung_m37_200_1k.hic/">download</a></td></tr><tr ><td style="width:30%;">GTEX-1K2DA (male, 54yrs)</td><td style="width:30%;"><a href="/download/upper_lobe_of_left_lung_m54_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">uterus</th><td style="width:30%;">GTEX-1LGRB (female, 53yrs)</td><td style="width:30%;"><a href="/download/uterus_f53_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;" rowspan="1">vagina</th><td style="width:30%;">GTEX-1LVAN (female, 51yrs)</td><td style="width:30%;"><a href="/download/vagina_f51_200_1k.hic/">download</a></td></tr></tbody></table>
+                </div>
+                <div class="tab-pane fade" id="list-cell-line" role="tabpanel">
+                  <table class="table table-sm table-bordered"><thead><tr><th scope="col">Cell line</th><th scope="col">Donor</th><th scope="col">Download</th></tr></thead><tbody><tr ><th scope="row" style="width:40%;">A549</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/A549_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">A673</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/A673_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">GM12878</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/GM12878_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">GM23338</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/GM23338_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">HCT116</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/HCT116_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">HeLa-S3</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/HeLa-S3_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">HepG2</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/HepG2_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">K562</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/K562_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">Karpas-422</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/Karpas-422_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">MCF-7</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/MCF-7_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">MM1S</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/MM1S_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">OCI-LY7</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/OCI-LY7_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">PC-3</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/PC-3_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">PC-9</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/PC-9_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">SK-N-SH</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/SK-N-SH_200_1k.hic/">download</a></td></tr></tbody></table>
+                </div>
+                <div class="tab-pane fade" id="list-primary-cell" role="tabpanel">
+                  <table class="table table-sm table-bordered"><thead><tr><th scope="col">Primary cell</th><th scope="col">Donor</th><th scope="col">Download</th></tr></thead><tbody><tr ><th scope="row" style="width:40%;">B cell</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/B_cell_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">CD14-positive monocyte</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/CD14-positive_monocyte_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">astrocyte</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/astrocyte_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">endothelial cell of umbilical vein</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/endothelial_cell_of_umbilical_vein_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">fibroblast of dermis</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/fibroblast_of_dermis_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">fibroblast of lung</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/fibroblast_of_lung_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">foreskin fibroblast</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/foreskin_fibroblast_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">foreskin keratinocyte</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/foreskin_keratinocyte_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">keratinocyte</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/keratinocyte_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">mammary epithelial cell</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/mammary_epithelial_cell_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">osteoblast</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/osteoblast_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">skeletal muscle myoblast</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/skeletal_muscle_myoblast_200_1k.hic/">download</a></td></tr></tbody></table>
+                </div>
+                <div class="tab-pane fade" id="list-in-vitro" role="tabpanel">
+                  <table class="table table-sm table-bordered"><thead><tr><th scope="col">In vitro differentiated cells</th><th scope="col">Donor</th><th scope="col">Download</th></tr></thead><tbody><tr ><th scope="row" style="width:40%;">bipolar neuron</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/bipolar_neuron_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">cardiac muscle cell</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/cardiac_muscle_cell_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">hepatocyte</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/hepatocyte_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">myotube</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/myotube_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">neural progenitor cell</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/neural_progenitor_cell_200_1k.hic/">download</a></td></tr><tr ><th scope="row" style="width:40%;">smooth muscle cell</th><td style="width:30%;">biosample donor</td><td style="width:30%;"><a href="/download/smooth_muscle_cell_200_1k.hic/">download</a></td></tr></tbody></table>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+    
+    </div>
+    <!-- window -->
+    <div class="window border-0 border-dark embed-responsive" id="nbframe">
+      <iframe name="nbrowser" id="nbrowser" class="embed-responsive-item" allowfullscreen></iframe>
+    </div>
+  </div>
+    
+  <hr />
+
+  <!-- copyright -->
+  <p class="mt-5 text-muted"><!--&copy;-->Acknowledgment : <a href="https://vis.nucleome.org/" target="_blank"
+     style="color: gray; text-decoration: none; border-bottom: solid 1px #e4e4e4;">Nucleome Browser</a></p>
+  <p class="mb-3 text-muted"><!--&copy;-->&copy; Liu Lab | University of Michigan | 2020</p>
+    
+  <!-- tutorial -->
+  <!--div class="jumbotron">
+      <h1 class="display-4">Tutorial</h1>
+      <p class="lead">Step 1</p>
+      <hr class="my-4">
+      <p>write something</p>
+      <a class="btn btn-primary btn-lg" target="_blank" href="/static/tutorial/tutorial.pdf" role="button">tutorial.pdf</a>
+  </div-->
+
+  <!-- footer -->
+  <footer class="blog-footer">
+      <!--p>Template from <a class="navlink" href="https://getbootstrap.com/">Bootstrap</a> by <a class="navlink" href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p-->
+      <a class="navlink" href="#">Back to top</a>
+      </p>
+  </footer>
+
+  <!-- Frame expand -->
+
+
+      
+  </body>
+</html>
